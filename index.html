@@ -655,7 +655,7 @@
         <p><br>El objetivo principal del seguro de vida es mantener económicamente a las personas a su cargo en caso de fallecimiento. Aunque lo más habitual es que las familias lo utilicen para sufragar gastos tras el fallecimiento, existe la posibilidad de utilizar parte del dinero para pagar gastos imprevistos al final de la vida. Se trata de una amplia categoría de seguros con múltiples tipos diferentes de pólizas</p>
         <h3>Tipos de pólizas de seguros de vida</h3>
         <p>Existen varios tipos de pólizas de seguro de vida, cuatro de las más populares son las de Vida a Término, Vida Entera, Vida Universal y Gastos finales.</p>
-        <button class="button" onclick="location.href='#form'">Cotizar</button>
+        <button class="button" onclick="closePopupAndRedirect('popup-vida', '#form')">Cotizar</button>
       </div>
     </div>
     <div id="popup-salud" class="popup-overlay">
@@ -667,7 +667,7 @@
         <p>Normalmente, los costes se pagan directamente al proveedor de asistencia o el plan puede reembolsarle el dinero gastado.</p>
         <h3>Muchos de estos seguros complementarios es una opción para personas con ITIN</h3>
         <p>Si usted ha tenido seguro de salud antes o esta es su primera vez, la comprensión de los detalles de cada tipo de plan es difícil. MTC plus Network, junto con nuestros agentes experimentados, estamos más que encantados de sentarnos y discutir sus opciones y qué planes son los más adecuados para sus necesidades.</p>
-        <button class="button" onclick="location.href='#form'">Cotizar</button>
+        <button class="button" onclick="closePopupAndRedirect('popup-salud', '#form')">Cotizar</button>
       </div>
     </div>
     <div id="popup-aca" class="popup-overlay">
@@ -1400,6 +1400,16 @@ $('#btnSend').click(function(){
 });
 
   </script>
+
+<script>	
+	function closePopupAndRedirect(popup, target) {
+	    // Cierra el popup
+	    document.getElementById(popup).style.display = 'none';
+	
+	    // Redirige a la sección del formulario
+	    window.location.href = target;
+	}
+</script>
 
 </body>
 </html>

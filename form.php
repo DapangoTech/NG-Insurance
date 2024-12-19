@@ -14,6 +14,6 @@ $headers = "From: $email";
 mail($to, $subject, $message, $headers);
  
 // Redireccionar a una página de confirmación
-header("Location: gracias.html");
+header("Location: index.html");
 exit;
 ?>

@@ -8,7 +8,7 @@ $mensaje = htmlspecialchars($_POST['mensaje']);
 // Procesar los datos (por ejemplo, enviar un correo electrónico)
 $to = "ricardo@dapango.tech";
 $subject = "Nuevo mensaje de contacto";
-$message = "Nombre: " . $nombre "\n Teléfono: " . $telefono "\n Email: " . $email "\n Mensaje: " . $mensaje;
+$message = "Nombre: " . $nombre "\nTeléfono: " . $telefono "\nEmail: " . $email "\nMensaje: " . $mensaje;
 $headers = "From: " . $email . "\n";
  
 if (mail($to, $subject, $message, $headers)){

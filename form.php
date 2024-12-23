@@ -9,9 +9,11 @@ $mensaje = htmlspecialchars($_POST['mensaje']);
 $to = "ricardo@dapango.tech";
 $subject = "Nuevo mensaje de contacto";
 $message = "Nombre: " . $nombre . "\nTeléfono: " . $telefono . "\nEmail: " . $email . "\nMensaje: " . $mensaje;
-$headers = "From: " . $email . "\n";
+$headers = "From: $email\r\n";
+$headers .= "Reply-To: $email\r\n";
+$headers .= "X-Mailer: PHP/" . phpversion();
  
-if (mail('ricardo@dapango.tech', 'Nuevo mensaje de contacto', 'BOY', 'From: ricardo@dapango.com')){
+if (mail($to, $subject, $message, $headers)){
  echo("Mensaje listo");
 }else{
  echo("Error en mensaje");

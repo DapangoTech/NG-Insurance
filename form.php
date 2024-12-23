@@ -11,7 +11,7 @@ $subject = "Nuevo mensaje de contacto";
 $message = "Nombre: " . $nombre . "\nTeléfono: " . $telefono . "\nEmail: " . $email . "\nMensaje: " . $mensaje;
 $headers = "From: " . $email . "\n";
  
-if (mail('ricardo@dapango.tech', 'Nuevo mensaje de contacto', $message, 'From: ricardo@dapango.com')){
+if (mail('ricardo@dapango.tech', 'Nuevo mensaje de contacto', 'BOY', 'From: ricardo@dapango.com')){
  echo("Mensaje listo");
 }else{
  echo("Error en mensaje");

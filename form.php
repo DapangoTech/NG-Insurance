@@ -1,9 +1,9 @@
 <?php
 // Obtener los datos del formulario
-$nombre = $_POST['names'];
+$nombre = htmlspecialchars($_POST['names']);
 $telefono = $_POST['phone'];
 $email = $_POST['email'];
-$mensaje = $_POST['mensaje'];
+$mensaje = htmlspecialchars($_POST['mensaje']);
  
 // Procesar los datos (por ejemplo, enviar un correo electrónico)
 $to = "ricardo@dapango.tech";

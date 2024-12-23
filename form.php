@@ -11,7 +11,11 @@ $subject = "Nuevo mensaje de contacto";
 $message = "Nombre: $nombre\nTeléfono: $telefono\nEmail: $email\nMensaje: $mensaje";
 $headers = "From: " . $email;
  
-mail($to, $subject, $message, $headers);
+if (mail($to, $subject, $message, $headers)){
+ echo("Mensaje listo");
+}else{
+ echo("Error en mensaje");
+}
  
 // Redireccionar a una página de confirmación
 header("Location: ./index.html");

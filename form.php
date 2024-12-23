@@ -9,7 +9,7 @@ $mensaje = $_POST['mensaje'];
 $to = "ricardo@dapango.tech";
 $subject = "Nuevo mensaje de contacto";
 $message = "Nombre: $nombre\nTeléfono: $telefono\nEmail: $email\nMensaje: $mensaje";
-$headers = "From: $email";
+$headers = "From: " . $email;
  
 mail($to, $subject, $message, $headers);
  

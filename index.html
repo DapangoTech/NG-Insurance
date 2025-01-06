@@ -1171,14 +1171,14 @@ form.form_contact input[type="submit"]:hover{
       </section>
   </section>
 
-  <form action="./form.php" class="form_contact" method="POST">
+  <form action="https://formsubmit.co/ricardo@dapango.tech" class="form_contact" method="POST">
       <h2>Cotizar Ahora</h2>
       <div class="user_info">
           <label for="names">Nombres *</label>
-          <input type="text" id="names" name="names" required>
+          <input type="text" id="names" name="nombre" required>
 
           <label for="phone">Telefono / Celular *</label>
-          <input type="text" id="phone" name="phone" required>
+          <input type="text" id="phone" name="telefono" required>
 
           <label for="email">Correo electronico *</label>
           <input type="text" id="email" name="email" required>
@@ -1187,6 +1187,8 @@ form.form_contact input[type="submit"]:hover{
           <textarea id="mensaje" name="mensaje" required></textarea>
 
           <input type="submit" value="Enviar Mensaje" id="btnSend">
+	  <input type="hidden" name="_next" value="https://www.ng-insurance.com/index.html">
+	  <input type="hidden" name="_captcha" value="false">
       </div>
   </form>
 
